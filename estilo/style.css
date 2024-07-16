@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'android';
+    src: url(../fontes/idroid.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url(../fontes/Montserrat-Light.ttf) format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'montserrat-extra';
+    src: url(../fontes/Montserrat-ExtraBold.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'montserrat-black';
+    src: url(../fontes/Montserrat-Black.ttf) format('opentype');
+    font-weight: bolder;
+}
+
+
+
+
+:root {
+    --cor0: #e0aaff;
+    --cor1: #c77dff;
+    --cor2: #9d4edd;
+    --cor3: #7b2cbf;
+    --cor4: #5a189a;
+    --cor5: #240046;
+    --cor6: #10002b;
+
+    --font-andoid: android;
+    --font-montserrat: Montserrat-normal;
+    --font-montserrat-bold: montserrat-bold;
+    --font-montserrat-extrabold: montserrat-extra;
+    --font-montserrat-black: montserrat-black;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor0);
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 120px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header>h1 {
+    font-family: var(--font-montserrat-black);
+    margin-bottom: 20px;
+    color: white;
+}
+
+header>p {
+    font-family: var(--font-montserrat-bold);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px 20px 10px;
+}
+
+nav {
+    background: var(--cor5);
+    padding: 10px;
+}
+
+nav>a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-montserrat-bold);
+
+}
+
+nav>a:hover {
+    background-color: var(--cor4);
+    color: var(--cor0);
+    border-radius: 6px;
+    transition: .5s;
+}
+
+
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+main h1,
+h2 {
+    font-family: var(--font-andoid);
+    background-image: linear-gradient(to left, rgba(128, 0, 128, 0), var(--cor5));
+    padding: 3px 10px;
+    color: white;
+}
+
+main p {
+    font-family: var(--font-montserrat-bold);
+    margin: 15px 0;
+    text-align: justify;
+    text-indent: 30px;
+    font-weight: 1.1em;
+    line-height: 2em;
+}
+
+main strong {
+    padding: 2px 5px;
+    color: var(--cor3);
+    font-family: var(--font-montserrat-black);
+}
+
+aside {
+
+    background-color: var(--cor1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 2px 2px 8px #10002b71;
+}
+
+aside h3 {
+    font-family: var(--font-montserrat-extrabold);
+    background-color: var(--cor3);
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 0 -20px;
+    border-radius: 15px 15px 0 0;
+}
+
+aside p {
+    color: white;
+}
+
+
+aside ul {
+    columns: 2;
+    list-style-type: '\2714\00a0\00a0';
+    list-style-position: inside;
+    color: var(--cor5);
+}
+
+
+footer {
+    width: 100%;
+    display: block;
+    background: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: var(--font-montserrat-bold);
+    font-weight: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor0);
+    font-family: var(--font-montserrat-bold);
+}
+
+#bugd {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+#dan-g,
+#dan-p {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+#irina-g,
+#irina-p {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+@media (max-width: 450px) {
+
+    #dan-g {
+        display: none;
+    }
+
+    #irina-g {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header p {
+        font-size: 1em;
+        padding: 0 10px 10px 10px;
+    }
+
+    aside li {
+        font-size: .9em;
+    }
+
+}
+
+@media (min-width: 450px) {
+    #dan-p {
+        display: none;
+    }
+
+    #irina-p {
+        display: none;
+    }
+}
